@@ -1,0 +1,22 @@
+/*
+    font-family: 'Niconne', cursive;
+    font-family: 'Rochester', cursive;
+    font-family: 'Fondamento', cursive;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Fondamento', cursive;
+}
+
+.front-page{
+    &__landing{
+        &__nav > .menu-item a{
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}

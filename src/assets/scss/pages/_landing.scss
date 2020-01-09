@@ -1,0 +1,38 @@
+.front-page{
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-blend-mode: overlay;
+    &__landing {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            & > .menu-item {
+                font-size: 2rem;
+                padding: 1rem;
+                list-style: none;
+                & a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__logo {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+.u-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.u-gloss-back {
+    background-image: linear-gradient(141deg, #d3d3d3 0%, #c4c4c4 51%, #f0f0f0 75%);
+}
+
+
+
+// Custom Logo Optionals
+.u-logo-round  img.custom-logo{
+    border-radius: 50%;
+}
+.u-logo-border  img.custom-logo{
+    border: .5rem solid white;
+}
+
+.u-box-shadow img.custom-logo {
+    box-shadow: 0 0.2rem .5rem rgba(0, 0, 0, 0.8);
+}
