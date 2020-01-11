@@ -31,8 +31,7 @@
         // Settings: Landing Background Image
         $wp_customize->add_setting('verlion_landing_image', array(
             'default' => '',
-            'sanitize_callback' => 'esc_url_raw',
-            'transport' => 'postMessage'
+            'sanitize_callback' => 'esc_url_raw'
         ));
         // Control: LAnding Background Image
         $wp_customize->add_control(
@@ -46,12 +45,30 @@
             )
         );
 
+        //------------ Landing Image 1
+        // Settings: Landing Image 1
+        $wp_customize->add_setting('verlion_landing_image_1', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw'
+        ));
+        // Control : Landing Image 1
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize, 'verlion_landing_image_1', array(
+                    'settings' => 'verlion_landing_image_1',
+                    'section' => 'verlion_landing_options',
+                    'label' => esc_html__( 'Landing Image 1', 'verlion' ),
+                    'description' => esc_html__( 'This is the image below the landing text', 'verlion' )
+                )
+            )
+        );
 
 
 
 
 
-        
+
+
 
     }
 

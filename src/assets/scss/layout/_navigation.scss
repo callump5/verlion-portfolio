@@ -1,0 +1,49 @@
+.front-page{
+    &__nav {
+        padding: 2rem 0;
+        background: /* gradient can be an image */
+            linear-gradient(
+                to right, 
+                rgba(255, 255, 255, 0.408) 0%,
+                rgba(255, 255, 255, 0.308) 30%,
+                rgba(231, 231, 231, 0.308) 45%, 
+                rgba(0, 0, 0, 0) 47%, 
+                rgba(0, 0, 0, 0) 53%, 
+                rgba(253, 253, 253, 0.308) 55%, 
+                rgba(253, 253, 253, 0.108) 75%, 
+                rgba(255, 255, 255, 0.308) 100%,
+            )
+        left bottom transparent no-repeat; 
+        background-size:150% 1px ;/* if linear-gradient, we need to resize it */
+        background-position: 50% 62%;
+
+        & > .u-container {
+            @include space-between; 
+        }
+
+        &--navs {
+            width: calc( (100%/2) - 75px);
+        }
+
+        &--right {
+            & .menu-item {
+                float: left;
+                margin-left: 2rem;
+            }
+        }
+
+        &--left { 
+            & .menu-item {
+                float: right;
+                margin-right: 2rem;
+            }
+        }
+
+
+        &__logo img.custom-logo {
+            width: 100px;
+            height: auto;
+        }
+
+    }
+}

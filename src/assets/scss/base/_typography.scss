@@ -1,22 +1,46 @@
 /*
-    font-family: 'Niconne', cursive;
-    font-family: 'Rochester', cursive;
-    font-family: 'Fondamento', cursive;
-    font-family: 'Montserrat', sans-serif;
+
+
+    font-family: 'Forum', cursive;
+
+    font-family: 'EB Garamond', serif;
+
+
 */
 
-h1 {
-    font-size: 4rem;
-    font-family: 'Fondamento', cursive;
-}
 
+
+// Front Page Nav
 .front-page{
-    &__landing{
-        &__nav > .menu-item a{
-            font-size: 2.5rem;
-            font-family: 'Montserrat', sans-serif;
-            color: white;
-            text-transform: uppercase;
+
+
+    & h1 {
+        font-size: 5rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    & h2 {
+        font-size: 2.7rem;
+        font-family: 'EB Garamond', serif;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+    
+    &__nav {
+        & .menu-item {
+            display: inline-block;
+            & > a {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.9rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                letter-spacing: 2px;
+            }
         }
     }
 }

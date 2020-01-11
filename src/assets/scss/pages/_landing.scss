@@ -1,38 +1,87 @@
 .front-page{
     height: 100vh;
-    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
     background-blend-mode: overlay;
+    
     &__landing {
-        width: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        perspective: 5700px;
 
-        &__nav {
+        &__content {
+            padding: 6rem 0;
+            text-align: center;
+            width: 575px;
+            color: white;   
+
+            & > h1 {
+                background: /* gradient can be an image */
+                    linear-gradient(
+                        to right, 
+                        rgb(61, 61, 61) 0%,
+                        rgb(255, 255, 255) 22%,
+                        rgb(63, 63, 63) 70%,
+                        rgb(179, 179, 179) 100%
+                    )
+                    left bottom transparent no-repeat; 
+                background-size:100% 1px ;/* if linear-gradient, we need to resize it */
+            }
+    
+            &__image-1 img:first-child{
+                display: inline-block;
+                height: 10rem;
+                width: auto;
+                margin-top: 12rem;
+            }
+
+        }
+
+        
+    }
+
+    &__social-nav {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        & .menu-item {
+            width: 60px;
+            height: 60px;
+            list-style: none;
+            background-color: white;
+            opacity: .7;
+            border-radius: 50%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            & > .menu-item {
-                font-size: 2rem;
-                padding: 1rem;
-                list-style: none;
-                & a {
-                    text-decoration: none;
+
+            & a {
+                color: white;
+                text-decoration: none;
+
+                & span {
+                    display: none;
+                }
+
+                & i {
+                    display: inline;
+                    font-size: 4rem;
+                    color: black;
+                    padding: 1rem;
                 }
             }
         }
+        & .menu-item i._before, .rtl .menu-item i._after{
+            margin-right: 0 !important;
 
-        &__logo {
-            width: 100%;
-            display: inline-block;
-            text-align: center;
-            margin-bottom: 3rem;
         }
     }
+
 
 }

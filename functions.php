@@ -8,8 +8,8 @@
     // Custom Logo
     function verlion_custom_logo() {
         add_theme_support('custom-logo', array(
-            "height" => "400px",
-            "width"  => "400px"
+            "height" => "1000px",
+            "width"  => "1000px"
         ) );
     }
     add_action( "init", "verlion_custom_logo" );
@@ -25,7 +25,10 @@
     // Register Nav Menus
     function verlion_register_menus(){
         register_nav_menus( array(
-            'main-menu' => esc_html__('Main Menu', 'verlion')
+            'left-menu'    => esc_html__( 'left Nav of Logo', 'verlion' ),
+            'right-menu'   => esc_html__( 'Right Nav of Logo', 'verlion' ),
+            'main-menu'    => esc_html__( 'Main Menu', 'verlion' ),
+            'social-menu'  => esc_html__( 'Social Menu', 'verlion' )
         ));
     }
     add_action( 'init', 'verlion_register_menus');
