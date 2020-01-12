@@ -7,8 +7,16 @@
             'title' => esc_html__( 'Landing Options', 'verlion' ),
             'description' => esc_html__( 'These are the settings for the landing page', 'verlion' )
         ));
-
-
+        // Section: Website Options
+        $wp_customize->add_section('verlion_website_options', array(
+            'title' => esc_html__( 'Website Options', 'verlion' ),
+            'description' => esc_html__( 'These are the main options for your website', 'verlion' )
+        ));
+        // Section: Theme Color Options
+        $wp_customize->add_section('verlion_color_options', array(
+            'title' => esc_html__( 'Theme Color Options', 'verlion' ),
+            'description' => esc_html__( 'These are the options to customize the colors of the theme', 'verlion' )
+        ));
 
 
         //------------ Landing Background Color
@@ -33,7 +41,7 @@
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
         ));
-        // Control: LAnding Background Image
+        // Control: Landing Background Image
         $wp_customize->add_control(
             new WP_Customize_Image_Control(
                 $wp_customize, 'verlion_landing_image', array(
@@ -59,6 +67,27 @@
                     'section' => 'verlion_landing_options',
                     'label' => esc_html__( 'Landing Image 1', 'verlion' ),
                     'description' => esc_html__( 'This is the image below the landing text', 'verlion' )
+                )
+            )
+        );
+
+
+
+        //------------ Website Background Image
+        // Settings: Website Background Image
+        $wp_customize->add_setting('verlion_website_background', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw'
+        ));
+        // Control: Website Background Image
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize, 'verlion_website_background', array(
+                    'setting' => 'verlion_website_background',
+                    'section' => 'verlion_website_options',
+                    'label' => esc_html__( 'Website Background', 'verlion' ),
+                    'description' => esc_html__( 'This is the background for all pages other than the front page', 'verlion' )
+
                 )
             )
         );

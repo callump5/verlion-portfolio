@@ -44,3 +44,30 @@
         }
     }
 }
+
+// Posts 
+.categories{
+    text-align: center;
+    &__posts{
+        letter-spacing: 2px;
+        line-height: 3rem;
+        &__title {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        &__content p {
+            color: white;
+            font-family: 'Forum', cursive;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            display: inline;
+            color: white;
+        }
+    }
+}
